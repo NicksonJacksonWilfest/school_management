@@ -1,0 +1,65 @@
+# Django specific
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+
+# Ignore the virtual environment
+venv/
+env/
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+*~
+.project
+.pydevproject
+*.sublime-project
+*.sublime-workspace
+
+# Ignore environment variables
+.env
+
+# Ignore static files and cache
+staticfiles/
+static/
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Ignore node modules (if using node for frontend)
+node_modules/
+
+# Ignore SASS cache
+.sass-cache/
+
+# Ignore yarn lock file (if using yarn)
+yarn.lock
+
+# Ignore any OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled code
+*.o
+*.so
+*.pyc
+*.pyo
+*.pyd
+*.dll
+*.dylib
+
+# Ignore test results
+*.xml
+*.out
+*.err

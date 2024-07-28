@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Detail</title>
+</head>
+<body>
+    <h1>{{ exam.name }}</h1>
+    <p>Description: {{ exam.description }}</p>
+    <p>Date: {{ exam.date }}</p>
+    <p>Duration: {{ exam.duration }}</p>
+    <p>Total Marks: {{ exam.total_marks }}</p>
+    <a href="{% url 'exams:exam_edit' exam.pk %}">Edit</a>
+    <a href="{% url 'exams:exam_delete' exam.pk %}">Delete</a>
+    <a href="{% url 'exams:exam_list' %}">Back to List</a>
+</body>
+</html>

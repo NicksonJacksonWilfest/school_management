@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Detail</title>
+</head>
+<body>
+    <h1>{{ teacher.first_name }} {{ teacher.last_name }}</h1>
+    <p>Date of Birth: {{ teacher.date_of_birth }}</p>
+    <p>Subject: {{ teacher.subject }}</p>
+    <p>Address: {{ teacher.address }}</p>
+    <p>Phone Number: {{ teacher.phone_number }}</p>
+    <p>Email: {{ teacher.email }}</p>
+    <a href="{% url 'teachers:teacher_edit' teacher.pk %}">Edit</a>
+    <a href="{% url 'teachers:teacher_delete' teacher.pk %}">Delete</a>
+    <a href="{% url 'teachers:teacher_list' %}">Back to List</a>
+</body>
+</html>

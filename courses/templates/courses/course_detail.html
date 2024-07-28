@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Detail</title>
+</head>
+<body>
+    <h1>{{ course.name }}</h1>
+    <p>Description: {{ course.description }}</p>
+    <p>Credits: {{ course.credits }}</p>
+    <a href="{% url 'courses:course_edit' course.pk %}">Edit</a>
+    <a href="{% url 'courses:course_delete' course.pk %}">Delete</a>
+    <a href="{% url 'courses:course_list' %}">Back to List</a>
+</body>
+</html>
