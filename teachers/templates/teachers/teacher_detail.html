@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Teacher Detail</title>
+    <link rel="stylesheet" href="{% static 'css/teacher_styles.css' %}">
 </head>
 <body>
     <h1>{{ teacher.first_name }} {{ teacher.last_name }}</h1>

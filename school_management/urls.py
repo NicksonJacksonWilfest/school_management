@@ -7,10 +7,11 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('students.urls')),
-    path('', include('teachers.urls')),
-    path('', include('courses.urls')),
-    path('', include('exams.urls')),
+    path('', include('home.urls')),
+    path('students/', include('students.urls')),
+    path('teachers/', include('teachers.urls')),
+    path('courses/', include('courses.urls')),
+    path('exams/', include('exams.urls')),
 ]
 
 handler404 = 'school_management.views.custom_404'

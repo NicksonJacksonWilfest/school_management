@@ -1,0 +1,31 @@
+<!-- home/templates/home/homepage.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sckool M System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Sckool M System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'students:student_list' %}">Students</a></li>
+                <li><a href="{% url 'teachers:teacher_list' %}">Teachers</a></li>
+                <li><a href="{% url 'courses:course_list' %}">Courses</a></li>
+                <li><a href="{% url 'exams:exam_list' %}">Exams</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>This is the homepage of the school management system. Use the navigation links above to manage students, teachers, courses, and exams.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 School Management System</p>
+    </footer>
+</body>
+</html>

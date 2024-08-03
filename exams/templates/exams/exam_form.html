@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Exam Form</title>
+    <link rel="stylesheet" href="{% static 'css/exams_styles.css' %}">
 </head>
 <body>
     <h1>{{ form.instance.pk|default:"Add New Exam" }}</h1>
