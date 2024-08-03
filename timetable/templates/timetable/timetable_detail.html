@@ -1,0 +1,24 @@
+<!-- timetable/templates/timetable/timetable_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Detail</title>
+</head>
+<body>
+    <h1>{{ timetable }}</h1>
+    <p>Classroom: {{ timetable.classroom }}</p>
+    <p>Course: {{ timetable.course }}</p>
+    <p>Start Time: {{ timetable.start_time }}</p>
+    <p>End Time: {{ timetable.end_time }}</p>
+    <p>Day of Week: {{ timetable.day_of_week }}</p>
+    <a href="{% url 'timetable:timetable_update' timetable.pk %}">Edit</a>
+    <form action="{% url 'timetable:timetable_delete' timetable.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{% url 'timetable:timetable_list' %}">Back to list</a>
+</body>
+</html>

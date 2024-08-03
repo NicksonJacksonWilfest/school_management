@@ -1,0 +1,23 @@
+<!-- attendance/templates/attendance/attendance_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Detail</title>
+</head>
+<body>
+    <h1>{{ attendance }}</h1>
+    <p>Student: {{ attendance.student }}</p>
+    <p>Course: {{ attendance.course }}</p>
+    <p>Date: {{ attendance.date }}</p>
+    <p>Present: {{ attendance.present }}</p>
+    <a href="{% url 'attendance:attendance_update' attendance.pk %}">Edit</a>
+    <form action="{% url 'attendance:attendance_delete' attendance.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{% url 'attendance:attendance_list' %}">Back to list</a>
+</body>
+</html>

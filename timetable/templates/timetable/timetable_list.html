@@ -1,0 +1,19 @@
+<!-- timetable/templates/timetable/timetable_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable List</title>
+</head>
+<body>
+    <h1>Timetable List</h1>
+    <ul>
+        {% for timetable in timetables %}
+            <li><a href="{% url 'timetable:timetable_detail' timetable.pk %}">{{ timetable }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'timetable:timetable_create' %}">Create new timetable</a>
+</body>
+</html>

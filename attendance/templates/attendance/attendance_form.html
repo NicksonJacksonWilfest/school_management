@@ -1,0 +1,19 @@
+<!-- attendance/templates/attendance/attendance_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create/Edit Attendance</title>
+</head>
+<body>
+    <h1>Create/Edit Attendance</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'attendance:attendance_list' %}">Back to list</a>
+</body>
+</html>

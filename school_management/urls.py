@@ -12,6 +12,8 @@ urlpatterns = [
     path('teachers/', include('teachers.urls')),
     path('courses/', include('courses.urls')),
     path('exams/', include('exams.urls')),
+    path('timetable/', include('timetable.urls')),
+    path('attendance/', include('attendance.urls')),
 ]
 
 handler404 = 'school_management.views.custom_404'
